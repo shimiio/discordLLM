@@ -1,0 +1,26 @@
+# Bob's settings. The Discord token goes in .env, not here.
+
+[discord]
+# Bob only talks in channels with this name.
+channel = "bob"
+reset_command = "!reset"
+reset_message = "The memory was reset"
+
+[ollama]
+model = "llama3.1:8b"
+host = "http://localhost:11434"
+
+[chat]
+# File with Bob's personality (the system prompt).
+# If it's missing, Bob uses prompt.example.md.
+prompt_file = "prompt.md"
+# Bob's name(s). Removed when a reply starts with one, like "Bob: hi".
+bot_names = ["Bob"]
+# How many recent messages Bob remembers per channel.
+history_limit = 20
+# Seconds to collect messages before Bob answers them all at once.
+batch_delay = 5
+# true: Bob's message grows live while he writes. false: he sends the finished answer.
+stream = false
+# Seconds between message edits while streaming.
+update_interval = 1.0

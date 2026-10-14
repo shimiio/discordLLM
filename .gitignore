@@ -1,0 +1,5 @@
+.env
+prompt.md
+__pycache__/
+.venv/
+venv/
